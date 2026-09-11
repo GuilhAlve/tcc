@@ -1,4 +1,8 @@
 import sqlite3
+import os
+from Flask import Flask, render_template, request, redirect
+
+app = Flask(__name__, template_folder="Front")
 
 conexao = sqlite3.connect("banco.db")
 cursor = conexao.cursor()
