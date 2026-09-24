@@ -1,9 +1,10 @@
 import sqlite3
 import os
-from Flask import Flask, render_template, request, redirect
+import flask, render_template, request, redirect
 
-app = Flask(__name__, template_folder="Front")
-
+app = flask(__name__: str"")
+def init_db():
+     conexao = sqlite3.connect("banco.db")
 conexao = sqlite3.connect("banco.db")
 cursor = conexao.cursor()
 
@@ -16,7 +17,10 @@ cursor.execute("""CREATE TABLE IF NOT EXISTS usuarios (
   )
 """)
 cursor.execute("""INSERT INTO usuarios (nome, email, senha, cargo)
-                 VALUES (?,?,?,?)""", ("Guilherme", "gui@email.com", "senha123", "Admin"))
+                 VALUES (?,?,?,?)""", ("Lucas", "teste@gmail.com", "hash2176", "Estagiario"))
+
+if "nome, email, senha, cargo" == False :
+        print ("Erro: Todos os campos devem ser preenchidos!", 400)
 
 conexao.commit()
 
