@@ -1,11 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#dfe3ff">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/principalADM.css">
+  <title>NexaDesk | Painel principal</title>
 </head>
 <body>
-    
+  <div class="dashboard">
+    <aside class="sidebar" aria-label="Navegação principal">
+      <a class="brand" href="/html/principalADM.html" aria-label="NexaDesk, início">
+        <span class="brand-mark" aria-hidden="true">N</span>
+        <span>NexaDesk</span>
+      </a>
+
+      <nav class="navigation">
+        <a class="nav-link" href="/html/user.html">
+          <span class="nav-icon" aria-hidden="true">♙</span>Usuários
+        </a>
+        <a class="nav-link" href="#resumo">
+          <span class="nav-icon" aria-hidden="true">▥</span>Relatórios / Dashboard
+        </a>
+        <a class="nav-link is-active" href="/html/Chamados.html" aria-current="page">
+          <span class="nav-icon" aria-hidden="true">▤</span>Chamados
+        </a>
+        <a class="nav-link" href="/html/Configs.html">
+          <span class="nav-icon" aria-hidden="true">⚙</span>Configurações
+        </a>
+        <a class="nav-link" href="/html/chatbot.html">
+          <span class="nav-icon" aria-hidden="true">?</span>Ajuda
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="user-avatar" id="avatar-usuario" aria-hidden="true">N</div>
+        <div class="user-summary">
+          <strong id="nome-sidebar">Usuário</strong>
+          <span>Conta ativa</span>
+        </div>
+        <button class="logout-button" id="sair" type="button" aria-label="Sair da conta" title="Sair">↗</button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="page-header">
+        <div>
+          <p class="eyebrow">NEXADESK <span>/</span> CENTRAL DE ATENDIMENTO</p>
+          <h1>Painel principal</h1>
+        </div>
+        <div class="live-indicator"><span></span>Visão geral</div>
+      </header>
+
+      <section class="welcome-section" aria-labelledby="boas-vindas">
+        <div class="welcome-copy">
+          <p class="eyebrow">SEU ESPAÇO DE TRABALHO</p>
+          <h2 id="boas-vindas">Bem-vindo, <span id="nome-usuario">Usuário</span></h2>
+          <p>Acompanhe os chamados e a atividade da equipe.</p>
+        </div>
+        <div class="welcome-symbol" aria-hidden="true">N</div>
+      </section>
+
+      <section class="stats-grid" id="resumo" aria-label="Resumo dos chamados">
+        <article class="stat-card stat-open">
+          <div class="stat-heading"><span class="stat-icon" aria-hidden="true">＋</span><span>Chamados abertos</span></div>
+          <strong>0</strong>
+          <span class="stat-note">Aguardando atendimento</span>
+        </article>
+        <article class="stat-card stat-progress">
+          <div class="stat-heading"><span class="stat-icon" aria-hidden="true">◷</span><span>Em andamento</span></div>
+          <strong>0</strong>
+          <span class="stat-note">Em atendimento pela equipe</span>
+        </article>
+        <article class="stat-card stat-done">
+          <div class="stat-heading"><span class="stat-icon" aria-hidden="true">✓</span><span>Finalizados</span></div>
+          <strong>0</strong>
+          <span class="stat-note">Concluídos até agora</span>
+        </article>
+      </section>
+
+      <section class="empty-state" aria-labelledby="estado-chamados">
+        <div class="empty-illustration" aria-hidden="true">
+          <span class="ticket-shape">✓</span>
+          <span class="spark spark-one">✳</span>
+          <span class="spark spark-two">✳</span>
+        </div>
+        <h2 id="estado-chamados">Não há chamados no momento</h2>
+        <p>Quando houver novas solicitações, elas aparecerão aqui.</p>
+        <a class="primary-action" href="/html/Chamados.html">Gerenciar chamados <span aria-hidden="true">→</span></a>
+      </section>
+
+      <footer class="page-footer">NexaDesk <span>·</span> Gerenciamento de chamados</footer>
+    </main>
+  </div>
+  <script src="/JavaScript/principalADM.js" defer></script>
 </body>
 </html>
