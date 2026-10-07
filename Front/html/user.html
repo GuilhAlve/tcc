@@ -3,124 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#dfe3ff">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/principalADM.css">
-    <link rel="stylesheet" href="/css/user.css">
-    <title>NexaDesk | Usuários</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/user.css">
+    <link rel="stylesheet" href="../css/Global.css">
+    <title>NexaDesk - Usuários</title>
+  
 </head>
 <body>
-    <div class="dashboard">
-        <aside class="sidebar" aria-label="Navegação principal">
-            <a class="brand" href="/html/principalADM.html" aria-label="NexaDesk, início">
-                <span class="brand-mark" aria-hidden="true">N</span>
-                <span>NexaDesk</span>
-            </a>
-            <nav class="navigation">
-                <a class="nav-link is-active" href="/html/user.html" aria-current="page">
-                    <span class="nav-icon" aria-hidden="true">♙</span>Usuários
-                </a>
-                <a class="nav-link" href="/html/principalADM.html#resumo">
-                    <span class="nav-icon" aria-hidden="true">▥</span>Relatórios / Dashboard
-                </a>
-                <a class="nav-link" href="/html/Chamados.html">
-                    <span class="nav-icon" aria-hidden="true">▤</span>Chamados
-                </a>
-                <a class="nav-link" href="/html/Configs.html">
-                    <span class="nav-icon" aria-hidden="true">⚙</span>Configurações
-                </a>
-                <a class="nav-link" href="/html/chatbot.html">
-                    <span class="nav-icon" aria-hidden="true">?</span>Ajuda
-                </a>
-            </nav>
-            <div class="sidebar-footer">
-                <div class="user-avatar" id="avatar-usuario" aria-hidden="true">U</div>
-                <div class="user-summary">
-                    <strong id="nome-sidebar">Usuário</strong>
-                    <span>Conta ativa</span>
-                </div>
-                <button class="logout-button" id="sair" type="button" aria-label="Sair da conta" title="Sair">↗</button>
-            </div>
-        </aside>
+    <div class="container-pai">
 
-        <main class="main-content users-content">
-            <header class="page-header">
-                <div>
-                    <p class="eyebrow">NEXADESK <span>/</span> ADMINISTRAÇÃO</p>
-                    <h1>Usuários</h1>
-                </div>
-                <div class="live-indicator"><span></span><span id="total-usuarios">Carregando</span></div>
-            </header>
+      <div class="SideBar">
+        <a href="principalADM.html">
+         <h1 class="Titulo-Logo">NexaDesk</h1>
+        </a>
+        <a href="user.html" class="Btns">Usuarios</a>
+        <div class="Btns">Relatorios</div>
+        <a href="Chamados.html" class="Btns">Chamados</a>
+        <a href="Configs.html" class="Btns">Configurações</a>
+        <a href="ChatBot.html" class="Btns">Ajuda/Chatbot</a>
 
-            <section class="users-toolbar" aria-label="Controles da lista de usuários">
-                <label class="search-field">
-                    <span aria-hidden="true">⌕</span>
-                    <input id="busca-usuarios" type="search" placeholder="Buscar por nome, e-mail ou perfil" autocomplete="off">
-                </label>
-                <button class="create-button" id="novo-usuario" type="button">
-                    <span aria-hidden="true">+</span>Novo usuário
-                </button>
-                <button class="refresh-button" id="atualizar-usuarios" type="button" title="Atualizar lista">Atualizar</button>
-            </section>
+      </div>
+    </div>
+    <div id="bloco">
+        <div class="retangulo-tbl">
+        <table>
+            <thead>
+                <tr class="top-tbl">
+                    <th>Nome</th>
+                    <th>Perfil</th>
+                    <th>Status</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
 
-            <section class="users-panel" aria-label="Usuários cadastrados">
-                <div class="table-scroll">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th scope="col">Nome</th>
-                                <th scope="col">E-mail</th>
-                                <th scope="col">Perfil</th>
-                                <th scope="col">Status</th>
-                                <th scope="col">Ações</th>
-                            </tr>
-                        </thead>
-                        <tbody id="usuarios-body"></tbody>
-                    </table>
-                </div>
-                <p class="users-status" id="usuarios-status" role="status" aria-live="polite">Carregando usuários...</p>
-            </section>
-            <footer class="page-footer">NexaDesk <span>·</span> Administração de usuários</footer>
-        </main>
+                <tbody>
+                    <tr class="tbl-sec">
+                            <td>a</td>
+                            <td>a</td>
+                            <td class="ativo">a</td>
+                            <td class="Ações">
+                                <a href="/Front/html/ADM.html" class="edit-perfil">
+                                <button class="editar-btn">Editar</button>
+                                </a></td>
+                    </tr>
+                </tbody>
+
+                <tbody>
+                    <tr class="tbl-sec">
+                            <td>a</td>
+                            <td>a</td>
+                            <td class="ativo">a</td>
+                            <td class="Ações">
+                                <a href="/Front/html/ADM.html" class="edit-perfil">
+                                <button class="editar-btn">Editar</button>
+                                </a></td>
+                    </tr>
+                </tbody>
+
+                <tbody>
+                    <tr class="tbl-sec">
+                            <td>a</td>
+                            <td>a</td>
+                            <td class="ativo">a</td>
+                            <td class="Ações">
+                                <a href="/Front/html/ADM.html" class="edit-perfil">
+                                <button class="editar-btn">Editar</button>
+                                </a></td>
+                    </tr>
+                </tbody>
+
+                <tbody>
+                    <tr class="tbl-sec">
+                            <td>a</td>
+                            <td>a</td>
+                            <td class="desativado">a</td>
+                            <td class="Ações">
+                                <a href="/Front/html/ADM.html" class="edit-perfil">
+                                <button class="editar-btn">Editar</button>
+                                </a></td>
+                                    
+                    </tr>
+                </tbody>
+
+                <tbody>
+                    <tr class="tbl-sec">
+                            <td>a</td>
+                            <td>a</td>
+                            <td class="desativado">a</td>
+                            <td class="Ações">
+                                <a href="/Front/html/ADM.html" class="edit-perfil">
+                                <button class="editar-btn">Editar</button>
+                                </a></td>
+                                    
+                    </tr>
+                </tbody>
+
+                <tbody>
+                    <tr class="tbl-sec-extra">
+                            <td>a</td>
+                            <td>a</td>
+                            <td class="desativado">a</td>
+                            <td class="Ações">
+                                <a href="/Front/html/ADM.html" class="edit-perfil">
+                                <button class="editar-btn">Editar</button>
+                                </a></td>
+                                    
+                    </tr>
+                </tbody>
+
+                <tbody>
+                    <tr class="tbl-sec-extra">
+                            <td>a</td>
+                            <td>a</td>
+                            <td class="desativado">a</td>
+                            <td class="Ações">
+                                <a href="/Front/html/ADM.html" class="edit-perfil">
+                                <button class="editar-btn">Editar</button>
+                                </a></td>
+                                    
+                    </tr>
+                </tbody>
+
+                <tbody>
+                    <tr class="tbl-sec-extra">
+                            <td>a</td>
+                            <td>a</td>
+                            <td class="desativado">a</td>
+                            <td class="Ações">
+                                <a href="/Front/html/ADM.html" class="edit-perfil">
+                                <button class="editar-btn">Editar</button>
+                                </a></td>
+                                    
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr class="tbl-sec-extra">
+                            <td>a</td>
+                            <td>a</td>
+                            <td class="ativo">a</td>
+                            <td class="Ações">
+                                <a href="/Front/html/ADM.html" class="edit-perfil">
+                                <button class="editar-btn">Editar</button>
+                                </a></td>
+                    </tr>
+                </tfoot>
+                
+        </table>
+        <button id="verMais" class="ver-mais">Ver Mais</button>
+        <div class="novo-usu-container">
+            <a href="/Front/html/ADM.html" class="novo-usu">Novo Usuário</a>
+        </div>
+        </div>
+        
     </div>
 
-    <dialog class="edit-dialog" id="dialog-editar" aria-labelledby="dialog-titulo">
-        <form id="form-editar" class="edit-form">
-            <div class="dialog-heading">
-                <div>
-                    <p class="eyebrow" id="dialog-eyebrow">CONTA</p>
-                    <h2 id="dialog-titulo">Editar usuário</h2>
-                </div>
-                <button class="dialog-close" id="fechar-dialogo" type="button" aria-label="Fechar">×</button>
-            </div>
-            <div class="dialog-field create-only" hidden>
-                <label for="editar-email">E-mail</label>
-                <input id="editar-email" name="email" type="email" autocomplete="email" required disabled>
-            </div>
-            <label for="editar-nome">Nome</label>
-            <input id="editar-nome" name="nome" type="text" autocomplete="name" required maxlength="120">
-            <div class="dialog-field create-only" hidden>
-                <label for="editar-cargo">Perfil</label>
-                <input id="editar-cargo" name="cargo" type="text" autocomplete="organization-title" required disabled maxlength="80">
-            </div>
-            <label id="senha-label" for="editar-senha">Nova senha</label>
-            <input id="editar-senha" name="senha" type="password" autocomplete="new-password" placeholder="Deixe em branco para manter" minlength="8">
-            <div class="dialog-field edit-only" hidden>
-                <label class="account-toggle" for="editar-ativo">
-                    <input id="editar-ativo" name="ativo" type="checkbox">
-                    <span>Conta ativa</span>
-                </label>
-                <p class="account-hint">Desative para impedir novos logins sem remover o cadastro.</p>
-            </div>
-            <p class="dialog-status" id="dialog-status" role="status" aria-live="polite"></p>
-            <div class="dialog-actions">
-                <button class="cancel-button" id="cancelar-edicao" type="button">Cancelar</button>
-                <button class="save-button" type="submit">Salvar alterações</button>
-            </div>
-        </form>
-    </dialog>
-    <script src="/JavaScript/user.js" defer></script>
+    <script src="/Front/JavaScript/user.js"></script>
+ 
 </body>
 </html>

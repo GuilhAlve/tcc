@@ -1,54 +1,42 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#dfe3ff">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/principalADM.css">
-  <link rel="stylesheet" href="/css/painel.css">
-  <title>NexaDesk | Ajuda</title>
-</head>
-<body>
-  <div class="dashboard">
-    <aside class="sidebar" aria-label="Navegação principal">
-      <a class="brand" href="/html/principalADM.html" aria-label="NexaDesk, início"><span class="brand-mark" aria-hidden="true">N</span><span>NexaDesk</span></a>
-      <nav class="navigation">
-        <a class="nav-link" href="/html/user.html"><span class="nav-icon" aria-hidden="true">♙</span>Usuários</a>
-        <a class="nav-link" href="/html/principalADM.html#resumo"><span class="nav-icon" aria-hidden="true">▥</span>Relatórios / Dashboard</a>
-        <a class="nav-link" href="/html/Chamados.html"><span class="nav-icon" aria-hidden="true">▤</span>Chamados</a>
-        <a class="nav-link" href="/html/Configs.html"><span class="nav-icon" aria-hidden="true">⚙</span>Configurações</a>
-        <a class="nav-link is-active" href="/html/chatbot.html" aria-current="page"><span class="nav-icon" aria-hidden="true">?</span>Ajuda</a>
-      </nav>
-      <div class="sidebar-footer">
-        <div class="user-avatar" id="avatar-usuario" aria-hidden="true">U</div>
-        <div class="user-summary"><strong id="nome-sidebar">Usuário</strong><span>Conta ativa</span></div>
-        <button class="logout-button" id="sair" type="button" aria-label="Sair da conta" title="Sair">↗</button>
-      </div>
-    </aside>
+ <html lang="pt-br">
+   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <main class="main-content">
-      <header class="page-header">
-        <div><p class="eyebrow">NEXADESK <span>/</span> SUPORTE</p><h1>Ajuda</h1></div>
-        <div class="live-indicator"><span></span>Assistente indisponível</div>
-      </header>
-      <section class="content-panel chat-panel" aria-label="Conversa com o assistente">
-        <div class="chat-transcript">
-          <div class="chat-mark" aria-hidden="true">N</div>
-          <h2>Como podemos ajudar?</h2>
-          <p>O assistente ainda não está conectado a um serviço de respostas. Para atendimento, abra um chamado pela central.</p>
-          <a class="panel-action secondary" href="/html/Abrir_chamado.html">Ir para abertura de chamado</a>
-        </div>
-        <form class="chat-compose">
-          <input type="text" placeholder="O envio de mensagens ainda não está disponível" aria-label="Mensagem" disabled>
-          <button class="panel-action" type="button" disabled>Enviar</button>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/ChatBot.css">
+    <link rel="stylesheet" href="../css/Global.css">
+    <title>NexaDesk - ChatBot</title>
+  </head>
+  <body>
+    <div class="container-pai">
+
+      <div class="SideBar">
+        <h1 class="Titulo-Logo">NexaDesk</h1>
+       
+        <a href="user.html" class="Btns">Usuarios</a>
+        <div class="Btns">Relatorios</div>
+        <a href="Chamados.html" class="Btns">Chamados</a>
+        <a href="Configs.html" class="Btns">Configurações</a>
+        <a href="ChatBot.html" class="Btns">Ajuda/Chatbot</a>
+
+      </div>
+
+      <div class="card">
+        <h1>ChatBot</h1>
+
+        <form action="#" method="post">
+          <div class="Caixa-De-Texto">
+            <input type="text" id="Texto" name="Texto_Input" placeholder="Qual a sua pergunta?">
+            <button type="submit">Enviar</button>
+          </div>
         </form>
-      </section>
-      <footer class="page-footer">NexaDesk <span>·</span> Central de ajuda</footer>
-    </main>
-  </div>
-  <script src="/JavaScript/painel.js" defer></script>
-</body>
+      </div>
+    </div>
+
+  </body>
 </html>

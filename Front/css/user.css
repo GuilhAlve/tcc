@@ -1,403 +1,119 @@
-.users-content {
-  display: flex;
-  flex-direction: column;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.users-toolbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 15px;
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
-.search-field {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  width: min(100%, 430px);
-  min-height: 43px;
-  padding: 0 13px;
-  color: #69708d;
-  background: rgba(255, 255, 255, 0.88);
-  border: 1px solid rgba(255, 255, 255, 0.9);
-  border-radius: 7px;
-}
-
-.search-field > span {
-  font-size: 22px;
-  line-height: 1;
-}
-
-.search-field input {
-  width: 100%;
-  min-width: 0;
-  color: #171b34;
-  background: transparent;
-  border: 0;
-  outline: 0;
-  font: inherit;
-  font-size: 13px;
-}
-
-.search-field:focus-within {
-  border-color: #557de8;
-  box-shadow: 0 0 0 3px rgba(85, 125, 232, 0.12);
-}
-
-.refresh-button,
-.create-button,
-.edit-button,
-.delete-button,
-.cancel-button,
-.save-button {
-  min-height: 37px;
-  padding: 0 13px;
-  border: 0;
-  border-radius: 6px;
-  cursor: pointer;
-  font: inherit;
-  font-size: 12px;
-  font-weight: 700;
-  transition: background-color 150ms ease, transform 150ms ease;
-}
-
-.refresh-button {
-  color: #344271;
-  background: rgba(255, 255, 255, 0.72);
-  border: 1px solid rgba(255, 255, 255, 0.8);
-}
-
-.create-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 7px;
-  min-height: 43px;
-  padding: 0 15px;
-  color: #fff;
-  background: linear-gradient(100deg, #4586f5, #2869ed);
-  border: 0;
-  border-radius: 6px;
-  box-shadow: 0 7px 14px rgba(40, 105, 237, 0.16);
-  cursor: pointer;
-  font: inherit;
-  font-size: 12px;
-  font-weight: 700;
-  white-space: nowrap;
-}
-
-.create-button:hover {
-  background: linear-gradient(100deg, #3677e7, #1c55c8);
-  transform: translateY(-1px);
-}
-
-.create-button > span {
-  font-size: 19px;
-  font-weight: 500;
-  line-height: 1;
-}
-
-.refresh-button:hover,
-.cancel-button:hover {
-  background: #e9ecff;
-}
-
-.users-panel {
-  min-width: 0;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.96);
-  border: 1px solid rgba(255, 255, 255, 0.88);
-  border-radius: 8px;
-  box-shadow: 0 12px 28px rgba(47, 55, 131, 0.08);
-}
-
-.table-scroll {
-  overflow-x: auto;
-}
-
-.users-panel table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: left;
-}
-
-.users-panel th,
-.users-panel td {
-  padding: 15px 18px;
-  border-bottom: 1px solid #edf0f7;
-  font-size: 13px;
-}
-
-.users-panel th {
-  color: #69708d;
-  background: #f8f9ff;
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.users-panel td {
-  color: #303650;
-}
-
-.users-panel tbody tr:last-child td {
-  border-bottom: 0;
-}
-
-.user-name-cell {
-  min-width: 150px;
-  color: #171b34 !important;
-  font-weight: 700;
-}
-
-.user-email-cell {
-  min-width: 190px;
-  overflow-wrap: anywhere;
-  color: #69708d !important;
-}
-
-.user-role {
-  display: inline-flex;
-  align-items: center;
-  min-height: 25px;
-  padding: 0 9px;
-  color: #43508b;
-  background: #edf0ff;
-  border-radius: 5px;
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: capitalize;
-}
-
-.account-status {
-  display: inline-flex;
-  align-items: center;
-  min-height: 25px;
-  padding: 0 9px;
-  border-radius: 5px;
-  font-size: 11px;
-  font-weight: 700;
-}
-
-.account-status.is-active {
-  color: #256849;
-  background: #e7f5ed;
-}
-
-.account-status.is-inactive {
-  color: #8a4242;
-  background: #faecec;
-}
-
-.user-actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 7px;
-  white-space: nowrap;
-}
-
-.edit-button {
-  color: #fff;
-  background: #2869ed;
-}
-
-.edit-button:hover,
-.save-button:hover {
-  background: #1c55c8;
-}
-
-.delete-button {
-  color: #a3333d;
-  background: #fff0f0;
-}
-
-.delete-button:hover {
-  background: #ffe0e2;
-}
-
-.users-status {
-  margin: 0;
-  padding: 23px 18px;
-  color: #69708d;
-  font-size: 13px;
-  text-align: center;
-}
-
-.users-status:empty {
-  display: none;
-}
-
-.edit-dialog {
-  width: min(100% - 32px, 460px);
-  max-width: 460px;
-  padding: 0;
-  color: #171b34;
-  background: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.85);
-  border-radius: 9px;
-  box-shadow: 0 22px 70px rgba(21, 28, 71, 0.28);
-}
-
-.edit-dialog::backdrop {
-  background: rgba(20, 25, 54, 0.48);
-  backdrop-filter: blur(3px);
-}
-
-.edit-form {
-  display: grid;
-  gap: 9px;
-  padding: 25px;
-}
-
-.dialog-field {
-  display: grid;
-  gap: 9px;
-}
-
-.edit-form .dialog-field[hidden] {
-  display: none;
-}
-
-.dialog-heading {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  margin-bottom: 8px;
-}
-
-.dialog-heading .eyebrow {
-  margin-bottom: 5px;
-}
-
-.dialog-heading h2 {
-  margin: 0;
-  font-family: "Space Grotesk", "Segoe UI", sans-serif;
-  font-size: 21px;
-}
-
-.dialog-close {
-  display: grid;
-  width: 32px;
-  aspect-ratio: 1;
-  place-items: center;
-  color: #69708d;
-  background: #f2f3f9;
-  border: 0;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 22px;
-  line-height: 1;
-}
-
-.edit-form label {
-  margin-top: 4px;
-  color: #434a65;
-  font-size: 12px;
-  font-weight: 700;
-}
-
-.edit-form input {
-  width: 100%;
-  min-height: 41px;
-  padding: 0 11px;
-  color: #171b34;
-  background: #fff;
-  border: 1px solid #dfe3ef;
-  border-radius: 6px;
-  font: inherit;
-  font-size: 13px;
-}
-
-.edit-form input:focus {
-  border-color: #557de8;
-  outline: 3px solid rgba(85, 125, 232, 0.13);
-}
-
-.edit-form input:disabled {
-  color: #69708d;
-  background: #f5f6fa;
-}
-
-.edit-form .account-toggle {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  margin-top: 4px;
-  cursor: pointer;
-}
-
-.edit-form .account-toggle input {
-  width: 17px;
-  min-height: 17px;
-  margin: 0;
-  accent-color: #2869ed;
-}
-
-.account-hint {
-  margin: 0;
-  color: #69708d;
-  font-size: 12px;
-}
-
-.dialog-status {
-  min-height: 16px;
-  margin: 2px 0 0;
-  color: #a3333d;
-  font-size: 12px;
-}
-
-.dialog-actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 8px;
-  margin-top: 5px;
-}
-
-.cancel-button {
-  color: #394169;
-  background: #f1f2f8;
-}
-
-.save-button {
-  color: #fff;
-  background: #2869ed;
-}
-
-.refresh-button:disabled,
-.create-button:disabled,
-.edit-button:disabled,
-.delete-button:disabled,
-.save-button:disabled {
-  cursor: wait;
-  opacity: 0.6;
-}
-
-@media (max-width: 680px) {
-  .users-toolbar {
-    flex-wrap: wrap;
-    align-items: stretch;
-  }
-
-  .search-field {
-    flex: 1 1 100%;
-  }
-
-  .create-button,
-  .refresh-button {
+#bloco {
     flex: 1;
-  }
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3vh 3vw;
+}
 
-  .users-panel th,
-  .users-panel td {
-    padding: 12px 10px;
-  }
+.retangulo-tbl {
+    width: clamp(200px, 75%, 1000px);
+    height: clamp(10px, 70vh, 70vh);
+    border-radius: 20px;
+    padding: 2vh 2vw;
+    background: white;
+    backdrop-filter: blur(6px);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
 
-  .users-panel table {
-    min-width: 740px;
-  }
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
 
-  .edit-form {
-    padding: 21px;
-  }
+.top-tbl {
+    height: clamp(60px, 9vh, 90px);
+    font-weight: bold;
+    font-family: "Segoe UI", sans-serif;
+    color: gray;
+}
+
+.tbl-sec {
+    height: clamp(50px, 7vh, 75px);
+    font-weight: bold;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.tbl-sec-extra {
+    height: clamp(50px, 7vh, 75px);
+    font-weight: bold;
+    font-family: "Segoe UI", sans-serif;
+    display: none;
+}
+
+td,
+th {
+    text-align: center;
+    border: none;
+}
+
+.ativo {
+    color: green;
+}
+
+.desativado {
+    color: red;
+}
+
+.editar-btn {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    color: blue;
+    text-decoration: none;
+}
+
+.ver-mais {
+    width: fit-content;
+    margin-left: 1vw;
+    margin-top: 2vh;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-family: "Segoe UI", sans-serif;
+    background-color: #4446af;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+.novo-usu-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    padding-top: 5vh;
+}
+
+.novo-usu {
+    padding: 5px 10px;
+    font-weight: bold;
+    font-family: "Segoe UI", sans-serif;
+    background-color: #4446af;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
 }
