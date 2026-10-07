@@ -3,31 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/Front/css/login.css">
-  <title>Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/login.css">
+  <link rel="stylesheet" href="/css/identity.css">
+  <title>NexaDesk | Entrar</title>
 </head>
-<body>
+<body class="identity-page">
   <div class="topo">
     <div class="logo">NexaDesk</div>
   </div>
 
-  <div class="card">
-    <form class="form" action="" method="post">
-      <input type="email" placeholder="Digite seu nome" required>
-      <input type="password" placeholder="Digite sua senha" required>
+  <main class="card">
+    <h1>Entrar na sua conta</h1>
+    <form class="form" id="login-form">
+      <input name="email" type="email" placeholder="Digite seu email" autocomplete="email" required>
+      <input name="senha" type="password" placeholder="Digite sua senha" autocomplete="current-password" required>
       <button type="submit">Avançar</button>
     </form>
+    <p id="login-status" role="status" aria-live="polite"></p>
 
     <a class="cons" href="criar_conta.html">
       <button type="button">Não tenho uma conta</button>
     </a>
-  </div>
+  </main>
 
   <div class="voltar-container">
     <a class="retorno" href="index.html">
       <button type="button">Voltar</button>
     </a>
   </div>
-  <script>scr="/front/Javascript/animacao"</script>
+  <script src="/JavaScript/login.js" defer></script>
 </body>
 </html>

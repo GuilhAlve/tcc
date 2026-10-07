@@ -22,6 +22,18 @@ body {
 .logo {
   font-size: 28px;
   font-weight: bold;
+  text-align: 20px;
+}
+
+.brand-mark {
+  display: grid;
+  width: 34px;
+  aspect-ratio: 1;
+  place-items: center;
+  color: white;
+  background: linear-gradient(145deg, #685de0, #3278ed);
+  border-radius: 10px;
+  font-size: 20px;
 }
 
 .config a {

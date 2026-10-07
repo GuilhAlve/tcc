@@ -1,16 +1,17 @@
 import express from 'express'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
+import usuariosRouter from './backend/routes/usuarios.js'
 
 const site = express()
-app.use(express.json())
+const diretorioAtual = path.dirname(fileURLToPath(import.meta.url))
 
-const user = []
+site.use(express.json())
+site.use(express.static(path.join(diretorioAtual, 'Front')))
+site.get('/', (_req, res) => res.redirect('/html/user.html'))
+site.use('/api/usuarios', usuariosRouter)
 
-app.post('/usuarios', (req, rsp) =>{
-
+const porta = process.env.PORT || 3000
+site.listen(porta, () => {
+    console.log(`Servidor disponível em http://localhost:3000`)
 })
-
-site.get('/usuarios', (req, res) =>{
-    res.send('Tudo certo')
-})
-
-site.listen(3000)
