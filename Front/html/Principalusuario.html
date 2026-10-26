@@ -7,17 +7,75 @@
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="/css/Principaluser.css">
-   <link rel="stylesheet" href="/css/painel.css">
-   <title>Sua tela principal</title>
+   <link rel="stylesheet" href="/Front/css/Principaluser.css">
+   <title>Central do usuario</title>
  </head>
  <body>
      <div class="dashboard">
-        <nav class="painel">
-         <a class="nav-link" href=""><span class="nav-icon" aria-hidden="true">♙</span>Abrir chamado</a>
-         <a class="nav-link" href=""><span class="nav-icon" aria-hidden="true">⚙</span>Configurações</a>
-         <a class="nav-link" href=""><span class="nav-icon" aria-hidden="true">?</span>Ajuda</a>
-        </nav>
+        <aside class="sidebar" aria-label="Navegação principal">
+      <a class="brand" href="/Front/html/Principalusuario.html" aria-label="NexaDesk, início">
+        <span class="brand-mark" aria-hidden="true">N</span>
+        <span>NexaDesk</span>
+      </a>
+
+      <nav class="navigation">
+        <a class="nav-link is-active" href="/Front/html/Principalusuario.html">
+          <span class="nav-icon" aria-hidden="true">♙</span>Central
+        </a>
+        <a class="nav-link" href="#resumo">
+          <span class="nav-icon" aria-hidden="true">▥</span>Relatórios / Dashboard
+        </a>
+        <a class="nav-link" href="/html/Chamados.html" aria-current="page">
+          <span class="nav-icon" aria-hidden="true">▤</span>Chamados
+        </a>
+        <a class="nav-link" href="/Front/html/ConfigUsuarios.html">
+          <span class="nav-icon" aria-hidden="true">⚙</span>Configurações
+        </a>
+        <a class="nav-link" href="/html/chatbot.html">
+          <span class="nav-icon" aria-hidden="true">?</span>Ajuda
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="user-avatar" id="avatar-usuario" aria-hidden="true">N</div>
+        <div class="user-summary">
+          <strong id="nome-sidebar">Usuário</strong>
+          <span>Conta ativa</span>
+        </div>
+        <button class="logout-button" id="sair" type="button" aria-label="Sair da conta" title="Sair">↗</button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="page-header">
+        <div>
+          <p class="eyebrow">NEXADESK <span>/</span> CENTRAL DO USUARIO</p>
+          <h1>Central</h1>
+        </div>
+        <div class="live-indicator"><span></span>Visão geral</div>
+      </header>
+
+      <section class="welcome-section" aria-labelledby="boas-vindas">
+        <div class="welcome-copy">
+          <h2 id="boas-vindas">Bem-vindo, <span id="nome-usuario">Usuário</span></h2>
+          <p>Acompanhe os seus chamados criados.</p>
+        </div>
+        <div class="welcome-symbol" aria-hidden="true">N</div>
+      </section>
+
+      <section class="empty-state" aria-labelledby="estado-chamados">
+        <div class="empty-illustration" aria-hidden="true">
+          <span class="ticket-shape">✓</span>
+          <span class="spark spark-one">✳</span>
+          <span class="spark spark-two">✳</span>
+        </div>
+        <h2 id="estado-chamados">Nenhum chamado criado no momento</h2>
+        <p>Quando criar novos chamados, eles aparecerão aqui.</p>
+        <a class="primary-action" href="">Criar chamados<span aria-hidden="true">+</span></a>
+      </section>
+
+      <footer class="page-footer">NexaDesk <span>·</span> Central do usuario</footer>
+    </main>
 
     </div> 
  </body>
